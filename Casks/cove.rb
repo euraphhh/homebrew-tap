@@ -13,15 +13,15 @@ cask "cove" do
   app "Cove.app"
 
   # The app is not notarized; drop the quarantine flag so it opens normally.
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-cr", "#{appdir}/Cove.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/Cove.app"]
   end
 
   uninstall quit: "com.euraphhh.cove"
 
   zap trash: [
-    "~/Library/Preferences/com.euraphhh.cove.plist",
     "~/Library/Caches/com.euraphhh.cove",
     "~/Library/HTTPStorages/com.euraphhh.cove",
+    "~/Library/Preferences/com.euraphhh.cove.plist",
   ]
 end
