@@ -1,6 +1,6 @@
 cask "cove" do
-  version "0.4.0"
-  sha256 "631c7f9035243040c846f08078c822acac1595e9ea641df78a83fa1f605b29ef"
+  version "0.5.0"
+  sha256 "7ffa74d8fa96a2ab33c03767b849c0e9ace2ebefe9ac71674f21998bdaa23e0f"
 
   url "https://github.com/euraphhh/cove-macos/releases/download/v#{version}/Cove.zip"
   name "Cove"
